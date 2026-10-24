@@ -1,9 +1,11 @@
 package ProPractice;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.Set;
 
 public class PropPractice {
 
@@ -23,13 +25,22 @@ public class PropPractice {
 
         Properties prop = new Properties();
 
-        prop.setProperty("url","localhost");
-        prop.setProperty("user","prasad");
-        prop.setProperty("password","@Chauhan99");
+//        prop.setProperty("url","localhost");
+//        prop.setProperty("user","prasad");
+//        prop.setProperty("password","@Chauhan99");
+//
+//        FileOutputStream fos = new FileOutputStream(file);
+//
+//        prop.store(fos, "New Properties file is created");
 
-        FileOutputStream fos = new FileOutputStream(file);
+        FileInputStream fis = new FileInputStream(file);
+        prop.load(fis);
+//       Set<Object> keys =  prop.keySet();
+//       System.out.println(keys);
 
-        prop.store(fos, " ");
+
+
+
 
 
 
