@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Collection;
+import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 
@@ -26,7 +27,7 @@ public class PropPractice {
 
         Properties prop = new Properties();
 
-       prop.setProperty("url","localhost");
+       prop.setProperty("url","121.23.23.453");
         prop.setProperty("username","prasad");
        prop.setProperty("password","@Chauhan99");
 
@@ -58,6 +59,15 @@ public class PropPractice {
             System.out.println(key+">>>>>>>>>>>> "+prop.getProperty((String)(key)));
         }
 
+System.out.println("=====================");
+
+
+        Set<Map.Entry<Object,Object>> data =  prop.entrySet();
+
+        for(Map.Entry<Object,Object> entry : data)
+        {
+            System.out.println(entry.getKey()+">>>>>>>>>>>> "+entry.getValue());
+        }
 
 
     }
