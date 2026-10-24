@@ -26,13 +26,13 @@ public class PropPractice {
 
         Properties prop = new Properties();
 
-//        prop.setProperty("url","localhost");
-//        prop.setProperty("user","prasad");
-//        prop.setProperty("password","@Chauhan99");
-//
-//        FileOutputStream fos = new FileOutputStream(file);
-//
-//        prop.store(fos, "New Properties file is created");
+       prop.setProperty("url","localhost");
+        prop.setProperty("username","prasad");
+       prop.setProperty("password","@Chauhan99");
+
+        FileOutputStream fos = new FileOutputStream(file);
+
+       prop.store(fos, "New Properties file is created");
 
         FileInputStream fis = new FileInputStream(file);
         prop.load(fis);
@@ -42,9 +42,21 @@ public class PropPractice {
         Collection<Object> c = prop.values();
         System.out.print(c);
 
+        System.out.print("\n");
+
+        System.out.println(prop.getProperty("username"));
+
+        System.out.println(prop.getProperty("MachineName","HP LAPTOP"));
+
+        System.out.println(prop.getProperty("urls","192.198.28.50"));
 
 
 
+
+        for(Object key : prop.keySet())
+        {
+            System.out.println(key+">>>>>>>>>>>> "+prop.getProperty((String)(key)));
+        }
 
 
 
