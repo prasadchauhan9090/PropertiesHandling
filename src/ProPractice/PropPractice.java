@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Collection;
 import java.util.Properties;
 import java.util.Set;
 
@@ -37,6 +38,9 @@ public class PropPractice {
         prop.load(fis);
 //       Set<Object> keys =  prop.keySet();
 //       System.out.println(keys);
+
+        Collection<Object> c = prop.values();
+        System.out.print(c);
 
 
 
